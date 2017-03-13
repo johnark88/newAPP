@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start":"node server/app.js",
+    "start": "node server/app.js",
     "dev": "nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,6 +20,8 @@
   "homepage": "https://github.com/johnark88/newAPP#readme",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.1.1"
   }
 }
