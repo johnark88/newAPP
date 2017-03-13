@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="client.js"></script>
-    <meta charset="utf-8">
-    <title>new Appp </title>
-  </head>
-  <body>
-      Hi.
-  </body>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="inc/angular.min.js"></script>
+        <script src="inc/angular-route.min.js"></script>
+        <script src="client.js"></script>
+        <script src="scripts/controllers/sourceController.js"></script>
+        <script src="scripts/controllers/homeController.js"></script>
+        <title>new Appp </title>
+    </head>
+
+    <body ng-app="myApp" ng-controller="homeController">
+        <div class="container">
+            <div class="row">
+                <div class="">
+                    <ul>
+                        <li><a href="#!home"> Home </a></li>
+                        <li><a href="#!source"> Source </a></li>
+                        <li><button ng-show="loggedOut" ng-click="logIn()" class="btn btn-sm btn-primary btn-block">Sign In</button></li>
+                        <li><button ng-show="loggedIn" ng-click="logOut()" class="btn btn-sm btn-primary btn-block">Sign Out</button></li>
+                    </ul>
+                    <h3 ng-show="loggedOut">Please Log In</h3>
+                    <h4 ng-show="loggedOut">{{nope}}</h4>
+                </div>
+            </div>
+        </div>
+        <main ng-view ng-if="loggedIn">
+    </body>
+
 </html>

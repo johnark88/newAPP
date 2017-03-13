@@ -15,6 +15,8 @@ app.get('/', function(req, res){
 //use public folder
 app.use(express.static('public'));
 app.use(bodyParser.json());
+app.use('/inc', express.static(path.resolve('./node_modules/angular')));
+app.use('/inc', express.static(path.resolve('./node_modules/angular-route')));
 
 app.listen(portDecision, function(){
   console.log('I am listening on', portDecision);
