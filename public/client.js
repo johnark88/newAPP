@@ -7,9 +7,9 @@ myApp.config(["$routeProvider", function($routeProvider) {
     when("/", {
         templateUrl: "/views/home.html",
     }).
-    when("/source", {
-        templateUrl: "/views/source.html",
-        controller: "sourceController"
+    when("/maps", {
+        templateUrl: "/views/maps.html",
+        controller: "mapsController"
     }).
     otherwise({
         redirectTo: "/"
