@@ -18,4 +18,6 @@ myApp.config(["$routeProvider", function($routeProvider) {
 
 myApp.controller('index', ['$scope', function($scope) {
     console.log('Angular');
+
+    
 }]);

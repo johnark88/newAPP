@@ -10,8 +10,8 @@ myApp.controller('mapsController', ['$scope', '$http', function($scope, $http) {
             center: myLatlng,
             mapTypeId: 'roadmap'
         };
-        var map = new google.maps.Map(document.getElementById('map'),
+         $scope.map = new google.maps.Map(document.getElementById('map'),
             mapOptions);
-    }
+    };
     // $scope.initMap();
 }]);
