@@ -1,0 +1,21 @@
+#navbar{
+  overflow: hidden;
+  background-color: #ffffff;
+  position: static;
+  top: 0;
+  width: 100%;
+}
+
+#navbar a{
+  float: left;
+  display: block;
+  color: #364900;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+ul{
+  list-style: none;
+}

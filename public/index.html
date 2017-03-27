@@ -4,6 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/stylesheet/indexStyle.css">
         <script src="inc/angular.min.js"></script>
         <script src="inc/angular-route.min.js"></script>
         <script src="client.js"></script>
@@ -16,15 +17,15 @@
 
     <body ng-app="myApp" ng-controller="homeController">
         <div class="container">
-            <div class="row">
-                <div class="">
+
+                <div id="navbar">
                     <ul>
                         <li><a href="#!home"> Home </a></li>
                         <li><a href="#!maps"> Maps </a></li>
                         <li><a href="#!reddit"> Reddit </a></li>
                     </ul>
                 </div>
-            </div>
+
         </div>
         <main ng-view >
 
