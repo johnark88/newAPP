@@ -11,6 +11,10 @@ myApp.config(["$routeProvider", function($routeProvider) {
         templateUrl: "/views/maps.html",
         controller: "mapsController"
     }).
+    when("/reddit", {
+      templateUrl: '/views/reddit.html',
+      controller:"redditController"
+    }).
     otherwise({
         redirectTo: "/"
     });
@@ -19,5 +23,5 @@ myApp.config(["$routeProvider", function($routeProvider) {
 myApp.controller('index', ['$scope', function($scope) {
     console.log('Angular');
 
-    
+
 }]);
