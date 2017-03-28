@@ -1,0 +1,11 @@
+#buttons{
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-style: normal;
+  font-family: sans-serif;
+}
+
+#links{
+  list-style: circle;
+}

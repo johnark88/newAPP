@@ -1,8 +1,12 @@
-<p>Reddit Here</p>
+<link rel="stylesheet" href="/stylesheet/redditStyle.css">
 
-<button ng-click='getReddit()'>Get Reddit </button>
-<ul>
-  <li ng-repeat="link in urlArray"><a href="{{link}}" target="_blank">{{titleArray[$index]}}</a></li>
+<div id="buttons">
+    <input ng-model="subReddit" placeholder="Choose subreddit">
+    <button ng-click='getReddit()'>Get Reddit </button>
+    <button ng-click='randomReddit()'> Random </button>
+</div>
+
+
+<ul id="links">
+    <li ng-repeat="link in urlArray"><a href="{{link}}" target="_blank">{{titleArray[$index]}}</a></li>
 </ul>
-
-<button ng-click='randomReddit()'> Random </button>

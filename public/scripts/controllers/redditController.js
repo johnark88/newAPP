@@ -1,20 +1,18 @@
 myApp.controller('redditController', ['$scope', '$http', function($scope, $http, $interval) {
     console.log('reddit Controller');
-    //url to hit
-    var getURL = 'http://www.reddit.com/r/churning/hot.json';
-    var random = 'http://www.reddit.com/r/churning/random.json';
-
+    
     //global arrays
     $scope.urlArray = [];
     $scope.titleArray = [];
     $scope.randomArray = [];
-    $scope.c = [];
 
     $scope.getReddit = function() {
-        //hit Reddit API
+        //set url based on user input
+        var redditUrl = 'http://www.reddit.com/r/' + $scope.subReddit + '/hot.json';
+        //hit Reddit API to get top post from a subreddit
         $http({
             method: 'GET',
-            url: getURL
+            url: redditUrl
         }).then(function(response) {
             console.log('response', response.data);
             $scope.a = response.data;
@@ -28,14 +26,17 @@ myApp.controller('redditController', ['$scope', '$http', function($scope, $http,
     }; //end scope dot reddit
 
 
-    $scope.randomReddit = function(){
-      $http({
-        method: 'GET',
-        url: random
-      }).then(function(response){
-          console.log(response.data, 'res');
-          $scope.b = response.data;
-          console.log($scope.b, 'b');
-      });//end then
-    };//end scope random reddit
+    $scope.randomReddit = function() {
+        //set url based on user input
+        var randomUrl = 'http://www.reddit.com/r/' + $scope.subReddit + '/random.json';
+        //hit reddit api to get random post
+        $http({
+            method: 'GET',
+            url: randomUrl
+        }).then(function(response) {
+            console.log(response.data, 'res');
+            $scope.b = response.data;
+            console.log($scope.b, 'b');
+        }); //end then
+    }; //end scope random reddit
 }]); //end controller
