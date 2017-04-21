@@ -1,6 +1,6 @@
 myApp.controller('redditController', ['$scope', '$http', function($scope, $http, $interval) {
     console.log('reddit Controller');
-    
+
     //global arrays
     $scope.urlArray = [];
     $scope.titleArray = [];
@@ -23,6 +23,7 @@ myApp.controller('redditController', ['$scope', '$http', function($scope, $http,
                 $scope.urlArray.push(item.data.url);
             }); //end for each
         }); //end then
+        $scope.urlArray = [];
     }; //end scope dot reddit
 
 
