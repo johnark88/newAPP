@@ -36,8 +36,7 @@ myApp.controller('redditController', ['$scope', '$http', function($scope, $http,
             url: randomUrl
         }).then(function(response) {
             console.log(response.data, 'res');
-            $scope.b = response.data;
-            console.log($scope.b, 'b');
+            
         }); //end then
     }; //end scope random reddit
 }]); //end controller
