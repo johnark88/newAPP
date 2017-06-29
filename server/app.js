@@ -21,3 +21,6 @@ app.use('/inc', express.static(path.resolve('./node_modules/angular-route')));
 app.listen(portDecision, function(){
   console.log('I am listening on', portDecision);
 });
+
+var getRoute = require('./routes/api/getRoute');
+app.use('/', getRoute);
