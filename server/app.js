@@ -22,5 +22,5 @@ app.listen(portDecision, function(){
   console.log('I am listening on', portDecision);
 });
 
-var getRoute = require('./routes/api/getRoute');
+const getRoute = require('./routes/api/getRoute');
 app.use('/', getRoute);

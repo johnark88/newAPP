@@ -1,6 +1,6 @@
 var router = require('express').Router();
 var path = require('path');
-var http = reuqire('http');
+var http = require('http');
 
 
 
